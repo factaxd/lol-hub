@@ -1,0 +1,262 @@
+:root {
+  /* Dark Theme Color Palette */
+  --background-color: #121212; /* Very dark gray background */
+  --card-background: #1e1e1e; /* Dark gray cards */
+  --text-color: #e0e0e0; /* Light gray text */
+  --text-muted: #a0a0a0; /* Muted gray text */
+  --border-color: #333333; /* Darker gray border */
+  --primary-blue: #2a7fff; /* Slightly brighter blue for dark mode */
+  --hover-blue: #539bff;
+  --lol-gold: #c8aa6e; /* Gold usually works well */
+  --link-color: var(--primary-blue);
+  --shadow-color: rgba(255, 255, 255, 0.05); /* Lighter shadow for dark bg */
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark; /* Set color scheme to dark */
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Remove default Vite logos and styles if they are still present */
+.logo,
+.logo:hover,
+.logo.react:hover {
+  display: none; /* Hide default logos */
+}
+
+/* We don't need to hide the keyframes rule itself, just the elements using it */
+/* 
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+
+/* Remove animation from the link if it exists */
+  a:nth-of-type(2) .logo {
+    animation: none; 
+}
+
+/* General Styles */
+h1 {
+    color: var(--lol-gold); /* Use gold for main title */
+    margin-bottom: 2rem;
+}
+
+p {
+    color: var(--text-muted);
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: var(--primary-blue);
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.25s, background-color 0.25s;
+}
+button:hover {
+    background-color: var(--hover-blue);
+    border-color: var(--hover-blue);
+  }
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  /* Remove default .card styles if present */
+  padding: 0; /* Reset padding if needed */
+}
+
+.read-the-docs {
+  color: var(--text-muted);
+}
+
+/* Champion List Styles */
+.champion-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); /* Slightly larger cards */
+  gap: 1.2rem;
+  padding: 1rem 0; /* Adjust padding */
+}
+
+.champion-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.8rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.champion-card:hover {
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 6px 12px var(--shadow-color); /* Adjusted shadow */
+  border-color: var(--lol-gold); /* Highlight border on hover */
+}
+
+.champion-icon {
+  width: 70px; /* Adjust size */
+  height: 70px;
+  display: block;
+  margin: 0 auto 0.7rem; /* Center image and add space below */
+  border-radius: 50%; /* Circular icons */
+  border: 2px solid var(--border-color); /* Subtle border */
+}
+
+.champion-card:hover .champion-icon {
+    border-color: var(--lol-gold);
+}
+
+.champion-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600; /* Slightly bolder */
+  color: var(--text-color); /* Ensure name is clearly visible */
+}
+
+/* Placeholder styles removed as they are no longer used */
+/* 
+.champion-detail-placeholder {
+  ...
+}
+.champion-detail-placeholder h2 {
+    ...
+}
+.champion-detail-placeholder button {
+    ...
+} 
+*/
+
+/* Container for Filters and Language Selector */
+.controls-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; 
+    margin-bottom: 2rem;
+    align-items: center; 
+}
+
+/* Filters container adjustments (if needed, otherwise it inherits flex properties) */
+.filters {
+  flex-grow: 1; 
+  margin-bottom: 0; 
+  padding: 0;
+  background: none;
+  border: none;
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 1rem;
+  /* Ensure filters don't push language selector too far on small screens */
+  min-width: 200px; /* Adjust as needed */
+}
+
+/* Language Selector Styles */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto; /* Push the selector to the right */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.language-selector label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+#language-select {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-background);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+#language-select:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Filter Controls Styles */
+.search-input {
+  flex-grow: 1; /* Take available space */
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-width: 200px; /* Minimum width */
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.role-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.role-filters button {
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.role-filters button:hover {
+  background-color: var(--border-color);
+  color: var(--text-color);
+  border-color: var(--text-muted);
+}
+
+.role-filters button.active {
+  background-color: var(--lol-gold);
+  color: var(--background-color); /* Dark text on gold background */
+  border-color: var(--lol-gold);
+  font-weight: 600;
+}
+
+/* No Results Message Style */
+.no-results {
+    grid-column: 1 / -1; /* Span across all grid columns */
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}

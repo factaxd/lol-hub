@@ -1,0 +1,292 @@
+/* Use variables defined in App.css (now dark theme) */
+.champion-detail {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 950px; 
+  border: 1px solid var(--border-color);
+  border-radius: 12px; 
+  background-color: var(--card-background); /* Use dark card background */
+  position: relative; 
+  box-shadow: 0 4px 12px var(--shadow-color); /* Use dark theme shadow */
+}
+
+.champion-detail.loading,
+.champion-detail.error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  background-color: var(--background-color); /* Dark background */
+  border: none;
+  box-shadow: none;
+}
+
+.champion-detail.error button {
+    margin-left: 1rem;
+    background-color: var(--text-muted);
+    color: var(--background-color); /* Dark text on light button */
+}
+.champion-detail.error button:hover {
+    background-color: var(--text-color);
+}
+
+.close-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  background-color: var(--background-color); /* Dark background */
+  color: var(--text-color); /* Light text */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.close-button:hover {
+    background-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.champion-detail h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.8rem;
+}
+
+.champion-detail h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.6rem;
+    color: var(--lol-gold); /* Use gold for section headers */
+    font-size: 1.4rem;
+}
+
+.champion-header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    align-items: flex-start; 
+}
+
+.champion-splash {
+    width: 350px; /* Larger splash */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0; 
+    border: 1px solid var(--border-color);
+}
+
+.champion-lore {
+    flex-grow: 1; 
+}
+
+.champion-lore h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    border-bottom: none; /* Remove border for subsection */
+    color: var(--text-color); /* Standard text color for lore title */
+    font-size: 1.2rem;
+}
+
+.champion-lore p {
+    line-height: 1.7;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Stat section background */
+.champion-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.8rem 1.5rem; 
+  background-color: var(--background-color); /* Dark background for contrast */
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.champion-stats div {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.champion-stats span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.champion-abilities {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* Ability card styles */
+.ability {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--card-background); /* Dark card background */
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Passive ability specific background */
+.ability.passive {
+    background-color: #2c2a24; /* Darker, desaturated gold/brown */
+    border-left: 4px solid var(--lol-gold);
+    padding-left: calc(1.2rem - 4px);
+}
+
+.ability img {
+  width: 60px; /* Slightly smaller skill icon */
+  height: 60px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  border: 1px solid var(--border-color);
+}
+
+.ability div {
+    flex-grow: 1;
+}
+
+.ability strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+  color: var(--text-color);
+}
+
+.ability strong span {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-left: 0.5rem;
+}
+
+.ability p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* New Gameplay Tips Section Styles */
+.gameplay-tips {
+    margin-top: 2.5rem; /* Space above the section */
+    margin-bottom: 2.5rem; /* Space below the section */
+}
+
+/* Use the same styling as other major headers */
+.gameplay-tips h3 {
+    margin-top: 0; /* Reset margin if needed */
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.6rem;
+    color: var(--lol-gold);
+    font-size: 1.4rem;
+}
+
+.tips-container {
+    display: flex;
+    gap: 2rem; /* Space between columns */
+    flex-wrap: wrap; /* Wrap columns on smaller screens */
+}
+
+.tips-column {
+    flex: 1; /* Each column tries to take equal space */
+    min-width: 250px; /* Minimum width before wrapping */
+    background-color: var(--card-background); /* Match card background */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.tips-column h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.tips-column ul {
+    list-style: disc; /* Use standard bullets */
+    padding-left: 1.5rem; /* Add padding for standard bullets */
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.tips-column li {
+    /* Remove pseudo-element specific padding/indent */
+    /* padding-left: 1.2em; */ 
+    /* text-indent: -1.2em; */
+    margin-bottom: 0.7rem;
+    line-height: 1.6;
+}
+
+/* Remove pseudo-element bullets */
+/*
+.ally-tips-column li::before {
+    content: "✔"; 
+    color: #28a745; 
+    margin-right: 0.6em;
+    font-weight: bold;
+}
+
+.enemy-tips-column li::before {
+    content: "✘"; 
+    color: #dc3545; 
+    margin-right: 0.6em;
+    font-weight: bold;
+}
+*/
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .champion-detail {
+        padding: 1rem;
+    }
+    .close-button {
+        top: 1rem;
+        right: 1rem;
+    }
+    .champion-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .champion-splash {
+        width: 100%;
+        max-width: 400px; 
+    }
+    .champion-stats {
+        grid-template-columns: 1fr; 
+        padding: 1rem;
+    }
+    .ability {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .ability img {
+        width: 50px;
+        height: 50px;
+    }
+    .tips-container {
+        flex-direction: column; /* Stack columns */
+        gap: 1.5rem;
+    }
+    .tips-column {
+        padding: 1rem;
+    }
+} 
