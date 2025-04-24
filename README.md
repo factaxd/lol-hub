@@ -2,8 +2,7 @@
 
 A web application built with React and TypeScript that displays League of Legends champion information using Riot's Data Dragon API.
 
-![Ekran görüntüsü 2025-04-24 213154](https://github.com/user-attachments/assets/358b2088-a0de-4a76-841e-83b7ef7c7282)
-![Ekran görüntüsü 2025-04-24 213215](https://github.com/user-attachments/assets/f144e865-593d-439d-ba3d-db18bd626263)
+![image](https://github.com/user-attachments/assets/c8b67338-0bf8-4365-8105-5a598a834792)
 
 
 ## Features
