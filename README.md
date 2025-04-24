@@ -2,8 +2,8 @@
 
 A web application built with React and TypeScript that displays League of Legends champion information using Riot's Data Dragon API.
 
-![image](https://github.com/user-attachments/assets/57711450-3284-4f93-815a-4c70636b86c9)
-![image](https://github.com/user-attachments/assets/88c69a4f-e871-4996-8c81-b45e796f011d)
+![Ekran görüntüsü 2025-04-24 213154](https://github.com/user-attachments/assets/358b2088-a0de-4a76-841e-83b7ef7c7282)
+![Ekran görüntüsü 2025-04-24 213215](https://github.com/user-attachments/assets/f144e865-593d-439d-ba3d-db18bd626263)
 
 
 ## Features
@@ -84,4 +84,4 @@ This project is configured for easy deployment on [Vercel](https://vercel.com/).
 3.  Vercel should automatically detect the Vite framework, use the `build` script (`npm run build`), and deploy the contents of the `dist` directory.
 4.  The included `vercel.json` file explicitly defines these settings for consistency.
 
-*(Once deployed, you can add the live URL here!)*
+*https://lol-hub.vercel.app/*
